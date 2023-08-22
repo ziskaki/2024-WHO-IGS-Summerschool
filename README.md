@@ -29,12 +29,12 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 ### <a name="0"></a> SOMEDAY, DATE
 | Time        | Welcome & Linux re-cap & Nanopore |
 | --          | --               |
-| 10:00-10:30 | Welcome & [introduction](day-welcome-linx-nanopore/general.md) |
-| 10:30-12:00 | [Linux re-cap](day-welcome-linx-nanopore/linux.md) |
+| 10:00-10:30 | Welcome & [introduction](day-welcome-linux-nanopore/general.md) |
+| 10:30-12:00 | [Linux re-cap](day-welcome-linux-nanopore/linux.md) |
 | 12:00-13:00 | Lunch break |
-| 13:00-14:00 | [Nanopore introduction](day-welcome-linx-nanopore/nanopore.md) |
+| 13:00-14:00 | [Nanopore introduction](day-welcome-linux-nanopore/nanopore.md) |
 | 14:00-14:30 | Coffee break |
-| 14:30-16:00 | [Hands-on & demo](day-welcome-linx-nanopore/hands-on.md) |
+| 14:30-16:00 | [Hands-on & demo](day-welcome-linux-nanopore/hands-on.md) |
 | 16:00-16:15 | Wrap-up & questions |
 
 ### <a name="1"></a> SOMEDAY, DATE
