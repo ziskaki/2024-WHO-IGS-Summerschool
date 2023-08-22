@@ -19,9 +19,9 @@ ls
 # make a new directory called 'myfolder'
 mkdir myfolder
 # make conda environment and activate it
-conda create -n nanoplot
+mamba create -n nanoplot
 conda activate nanoplot
-conda install nanoplot
+mamba install nanoplot
 # run a program
 NanoPlot reads.fq.gz ...
 ```
@@ -66,10 +66,11 @@ exit
 ```
 Due to competing requests it may take some time until the requested resources can be provided by the system. Therefore, wait patiently until the prompt appears. Reducing requested resources might help as well.
 
+## Install mamba (if done already on your machine: skip)
 
-## Install conda (if done already on your machine: skip)
-
-* Conda is a packaging manager that will help us to install bioinformatics tools and to handle their dependencies automatically
+* Mamba is a packaging manager that will help us to install bioinformatics tools and to handle their dependencies automatically
+* Mamba works together with the conda package manager, and makes installing packages faster
+* You will use the mamba command to create environments and install packages, and conda command for some other package management tasks like configuration and activating environments (yes it can be a bit confusing)
 * In the terminal enter:
 
 ```bash
@@ -82,17 +83,21 @@ mkdir workshop
 # switch to this folder
 cd workshop
 
-# Download conda installer
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
+# Download mamba installer
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh"
 
-# Run conda installer
-bash Miniconda3-latest-Linux-x86_64.sh
+# ATTENTION: the space in your home directory might be limited (e.g. 10 GB) and per default conda installs tools into ~/.conda/envs
+# Thus, take care of your disk space!
+# On the HPC you can take care of this by moving ~/.conda to /scratch and making a symlink from your home directory:
+# mv ~/.conda /scratch/dot-conda
+# ln -s /scratch/dot-conda ~/.conda
+
+# Run installer
+bash Mambaforge-Linux-x86_64
 # Use space to scroll down the license agreement
 # then type 'yes'
 # accept the default install location with ENTER
-# when asked whether to initialize Miniconda3 type 'yes'
-# ATTENTION: the space in your home directory might be limited (e.g. 10 GB) and per default conda installs tools into ~/.conda/envs
-# Thus, take care of your disk space! 
+# when asked whether to initialize mamba type 'yes'
 
 # Now start a new shell or simply reload your current shell via
 bash
@@ -100,7 +105,7 @@ bash
 # You should now be able to create environments, install tools and run them
 ```
 
-* Set up conda
+* Set up mamba
 
 ```bash
 # add repository channels for bioconda
@@ -113,7 +118,7 @@ conda config --add channels conda-forge
 
 ```bash
 # -n parameter to specify the name
-conda create -n workshop
+mamba create -n workshop
 
 # activate this environment
 conda activate workshop
@@ -121,7 +126,5 @@ conda activate workshop
 # You should now see (workshop) at the start of each line.
 # You switched from the default 'base' environment to the 'workshop' environment.
 ```
-
-__Hint:__ An often faster and more stable alternative to `conda` is `mamba`. Funningly, `mamba` can be installed via `conda` and then used in the similar way. Just replace `conda` then with `mamba` (like shown in the bioinformatics tool slides, linked below).
 
 Next: [Long-read Nanopore Introduction & Quality Control](nanopore.md)
