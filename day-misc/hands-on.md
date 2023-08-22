@@ -105,7 +105,8 @@ We can use `sourmash` to classify the assembled contigs taxonomically using refe
 * select 31 as k-mer size (`--k 31`)
 
 ```bash
-conda activate workshop
+mamba create -y -p envs/sourmash sourmash
+conda activate envs/sourmash
 
 # download sourmash GTDB index v202 w/ taxonomy
 # GTDB genomic representatives (47.8k genomes), LCA, kmer 31 --> https://sourmash.readthedocs.io/en/latest/databases.html

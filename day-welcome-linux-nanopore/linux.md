@@ -22,6 +22,11 @@ mkdir myfolder
 mamba create -n nanoplot
 conda activate nanoplot
 mamba install nanoplot
+# Attention, the above command will create a folder 'nanoplot' in your default path, e.g. ~/miniconda3/envs
+# However, you can also specify any other folder, and which we will also do in the training:
+mamba create -p envs/nanoplot
+conda activate envs/nanoplot
+mamba install nanoplot
 # run a program
 NanoPlot reads.fq.gz ...
 ```
@@ -118,13 +123,14 @@ conda config --add channels conda-forge
 
 ```bash
 # -n parameter to specify the name
-mamba create -n workshop
+mamba create -p envs/workshop
 
 # activate this environment
-conda activate workshop
+conda activate envs/workshop
 
 # You should now see (workshop) at the start of each line.
 # You switched from the default 'base' environment to the 'workshop' environment.
+# Which is placed in a folder envs/workshop
 ```
 
 Next: [Long-read Nanopore Introduction & Quality Control](nanopore.md)
