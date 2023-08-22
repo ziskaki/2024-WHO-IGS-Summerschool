@@ -1,4 +1,4 @@
-# Workshop, Linux re-cap
+# Workshop - Linux re-cap
 
 ## Short Linux and bash re-cap
 

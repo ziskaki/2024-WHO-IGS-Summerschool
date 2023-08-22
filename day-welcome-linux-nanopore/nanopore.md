@@ -1,4 +1,4 @@
-# Workshop, Nanopore Introduction
+# Workshop - Nanopore Introduction & QC
 
 ## Long-read Nanopore Sequencing, Data Formats & Quality Control
 

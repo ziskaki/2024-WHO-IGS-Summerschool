@@ -1,4 +1,4 @@
-# Workshop, General
+# Workshop - General
 
 <a href="https://pollev.com/martinholzer210"><img align="right" width="140" height="140" src="../src/pollev.png"></a>
 
