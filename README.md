@@ -80,7 +80,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 ### <a name="5"></a> SOMEDAY, DATE
 | Time        | SARS-CoV-2 Introduction |
 | --          | --               |
-| 10:00-11:00 | [Course intro](day-sc2-intro/README.md) |
+| 10:00-11:00 | [FU course intro](day-sc2-intro/README.md) |
 | 11:00-12:00 | [RKI Genomic Surveillance and SARS-CoV-2](day-sc2-intro/README.md) |
 
 
