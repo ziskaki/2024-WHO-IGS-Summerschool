@@ -113,8 +113,17 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:00-15:45 | Continue practical session |
 | 15:45-16:00 | Wrap-up & questions |
 
-
-
+### <a name="7"></a> SOMEDAY, DATE
+| Time        | SARS-CoV-2 pathogen evolution & incidence estimation |
+| --          | --               |
+| 09:00-10:00 | Debriefing previous day |
+| 10:00-12:00 | [SARS-CoV-2 pathogen evolution and genome-based incidence estimation](day-sc2-incidence/README.md) |
+| 12:00-13:00 | Lunch break |
+| 13:00-14:00 | [VOCAL](day-sc2-incidence/README.md) |
+| 14:30-15:00 | Coffee break |
+| 13:00-14:30 | [Hands-on & demo](day-sc2-incidence/hands-on.md) |
+| 15:00-15:45 | Continue practical session |
+| 15:45-16:00 | Wrap-up & questions |
 
 
 
