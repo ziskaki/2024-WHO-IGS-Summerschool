@@ -16,12 +16,12 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 * [YYYY-MM-DD - SOMEDAY: Nanopore sequencing, data formats, and QC](#1)  
 * [YYYY-MM-DD - SOMEDAY: _De novo_ assembly and mapping](#2)  
 * [YYYY-MM-DD - SOMEDAY: Assembly polishing and variant calling](#3)  
-* [YYYY-MM-DD - SOMEDAY: Final day, Miscellaneous](#4)  
-* [YYYY-MM-DD - SOMEDAY: FU course intro & RKI SARS-CoV-2 genomic surveillance intro](#5)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 sequencing & genome reconstruction](#6)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 mutation profiling & phenotypization](#7)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 pathogen evolution & genome-based incidence estimation](#8)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 phylogeny & outbreak investigation](#9)  
+* [YYYY-MM-DD - SOMEDAY: FU course intro & RKI SARS-CoV-2 genomic surveillance intro](#4)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 sequencing & genome reconstruction](#5)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 mutation profiling & phenotypization](#6)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 pathogen evolution & genome-based incidence estimation](#7)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 phylogeny & outbreak investigation](#8)  
+* [YYYY-MM-DD - SOMEDAY: Final day, Miscellaneous](#x)  
 
 ## Instructors
 
@@ -81,18 +81,35 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:45-16:00 | Wrap-up & questions |
 
 ### <a name="4"></a> SOMEDAY, DATE
+| Time        | SARS-CoV-2 Introduction |
+| --          | --               |
+| 09:00-10:00 | Debriefing previous day |
+| 10:00-11:00 | [FU course intro](day-sc2-intro/README.md) |
+| 11:00-12:00 | [RKI Genomic Surveillance and SARS-CoV-2](day-sc2-intro/README.md) |
+
+
+### <a name="4"></a> SOMEDAY, DATE
+| Time        | SARS-CoV-2 sequencing & genome reconstruction |
+| --          | --               |
+| 09:00-10:00 | Debriefing previous day |
+| 10:00-11:00 | [Sequencing (SARS-CoV-2)](day-sc2-seq-and-assembly/README.md) |
+| 11:00-12:00 | [SARS-CoV-2 genome reconstruction](day-sc2-seq-and-assembly/README.md) |
+| 12:00-13:00 | Lunch break |
+| 13:00-14:30 | [Hands-on & demo](day-sc2-seq-and-assembly/hands-on.md) |
+| 14:30-15:00 | Coffee break |
+| 15:00-15:45 | Continue practical session |
+| 15:45-16:00 | Wrap-up & questions |
+
+
+
+
+### <a name="x"></a> SOMEDAY, DATE
 | Time        | The Rest & Open Questions |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
 | 10:00-11:00 | [Miscellaneous](day-misc/README.md) |
 | 11:00-12:00 | [Hands-on & demo](day-misc/hands-on.md) |
 | 12:00-12:30 | Wrap-up & questions |
-
-### <a name="5"></a> SOMEDAY, DATE
-| Time        | SARS-CoV-2 Introduction |
-| --          | --               |
-| 10:00-11:00 | [FU course intro](day-sc2-intro/README.md) |
-| 11:00-12:00 | [RKI Genomic Surveillance and SARS-CoV-2](day-sc2-intro/README.md) |
 
 
 
