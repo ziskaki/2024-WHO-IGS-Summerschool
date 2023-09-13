@@ -6,7 +6,7 @@ Welcome to the workshop! For every day, you will usually find a separate `README
 
 * [General](general.md)
 * [Linux re-cap](linux.md)
-* [Nanopore introduction & QC](nanopore.md)
+* [Container & WMS](container-wms.md)
 
 ## Practical part
 
