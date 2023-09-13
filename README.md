@@ -18,7 +18,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 * [YYYY-MM-DD - SOMEDAY: Assembly polishing and variant calling](#3)  
 * [YYYY-MM-DD - SOMEDAY: FU course intro & RKI SARS-CoV-2 genomic surveillance intro](#4)  
 * [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 sequencing & genome reconstruction](#5)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 mutation profiling & phenotypization](#6)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 evolution, mutation profiling & phenotypization](#6)  
 * [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 pathogen evolution & genome-based incidence estimation](#7)  
 * [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 phylogeny & outbreak investigation](#8)  
 * [YYYY-MM-DD - SOMEDAY: Final day, Miscellaneous](#x)  
@@ -87,8 +87,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 10:00-11:00 | [FU course intro](day-sc2-intro/README.md) |
 | 11:00-12:00 | [RKI Genomic Surveillance and SARS-CoV-2](day-sc2-intro/README.md) |
 
-
-### <a name="4"></a> SOMEDAY, DATE
+### <a name="5"></a> SOMEDAY, DATE
 | Time        | SARS-CoV-2 sequencing & genome reconstruction |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
@@ -99,6 +98,22 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 14:30-15:00 | Coffee break |
 | 15:00-15:45 | Continue practical session |
 | 15:45-16:00 | Wrap-up & questions |
+
+### <a name="6"></a> SOMEDAY, DATE
+| Time        | SARS-CoV-2 evolution, mutation profiling & phenotypization |
+| --          | --               |
+| 09:00-10:00 | Debriefing previous day |
+| 10:00-11:00 | [SARS-CoV-2 genome organisation & evolution](day-sc2-evolution/README.md) |
+| 10:00-11:00 | [SARS-CoV-2 epistasis and variants](day-sc2-evolution/README.md) |
+| 12:00-13:00 | Lunch break |
+| 10:00-11:00 | [SARS-CoV-2 nomenclature](day-sc2-evolution/README.md) |
+| 11:00-12:00 | [Mutation profiling](day-sc2-evolution/README.md) |
+| 14:30-15:00 | Coffee break |
+| 13:00-14:30 | [Hands-on & demo](day-sc2-evolution/hands-on.md) |
+| 15:00-15:45 | Continue practical session |
+| 15:45-16:00 | Wrap-up & questions |
+
+
 
 
 
