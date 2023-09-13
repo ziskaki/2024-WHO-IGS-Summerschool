@@ -16,7 +16,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 * [YYYY-MM-DD - SOMEDAY: _De novo_ assembly and mapping](#1)  
 * [YYYY-MM-DD - SOMEDAY: Assembly polishing and variant calling](#2)  
 * [YYYY-MM-DD - SOMEDAY: Final day, Miscellaneous](#3)  
-
+* [YYYY-MM-DD - SOMEDAY: Container and WMS](#4)  
 
 ## Instructors
 
@@ -51,7 +51,6 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:45-16:00 | Wrap-up & questions |
 
 ### <a name="2"></a> SOMEDAY, DATE
-
 | Time        | Assembly polishing and variant calling |
 | --          | --               |
 | 09:00-10:00 | Debriefing Day 2 |
@@ -65,13 +64,18 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:45-16:00 | Wrap-up & questions |
 
 ### <a name="3"></a> SOMEDAY, DATE
-
 | Time        | The Rest & Open Questions |
 | --          | --               |
 | 09:00-10:00 | Debriefing Day 3 |
 | 10:00-11:00 | [Miscellaneous](day-misc/README.md) |
 | 11:00-12:00 | [Hands-on & demo](day-misc/hands-on.md) |
 | 12:00-12:30 | Wrap-up & questions |
+
+### <a name="4"></a> SOMEDAY, DATE
+| Time        | Container and WMS |
+| --          | --               |
+| 10:00-11:00 | [Container and WMS](day-container-wms/README.md) |
+
 
 
 ## Acknowledgement
