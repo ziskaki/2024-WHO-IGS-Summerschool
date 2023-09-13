@@ -87,7 +87,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 
 ## Acknowledgement
 
-This course material is partly based on the following resources and on contributions from great people:
+This course material is partly based on the following resources and on contributions from great people (no specific order):
 
 * Sebastian "Raverjay" Krautwurst, FSU Jena, some Linux and ONT content
 * Stephan Fuchs, RKI MF1, some Linux and Assembly content 
@@ -95,3 +95,4 @@ This course material is partly based on the following resources and on contribut
 * Workshop structure inspired by [https://github.com/cinemaparis/2023](https://github.com/cinemaparis/2023)
 * Some ONT intro slides from Josh Quick, [original](https://github.com/cinemaparis/2023/blob/main/day1-Tuesday/slides-Quick.pdf)
 * Nanopore long-read bioinformatics tutorial from [timkahlke](https://timkahlke.github.io/LongRead_tutorials)
+* Max von Kleist, RKI P5 and FU Berlin, content about NGS and SC2 data science
