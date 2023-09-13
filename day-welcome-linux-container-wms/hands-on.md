@@ -83,9 +83,9 @@ ls -lah
 ls -lah testdir/
 ```
 
-### (H)PC setup
+### HPC setup 
 
-If you are using your own (Linux) laptop or one provided for the workshops you are good to go. If you are using **an RKI Windows laptop**, you have to connect to the Linux High-Performance Cluster (HPC). You also need an account that you can request via an IT ticket. 
+If you are using your own (Linux) laptop or one provided for the workshops you are good to go. If you are using **an RKI Windows laptop**, you have to connect to the Linux High-Performance Cluster (HPC). You also need an account that you can request via an IT ticket. If you are working on another HPC that runs the SLURM job scheduler, such as the FU cluster, the following commands might be also interesting for you (see `srun` examples below).
 
 #### HPC access
 
