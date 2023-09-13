@@ -17,6 +17,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 * [YYYY-MM-DD - SOMEDAY: Assembly polishing and variant calling](#2)  
 * [YYYY-MM-DD - SOMEDAY: Final day, Miscellaneous](#3)  
 * [YYYY-MM-DD - SOMEDAY: Container and WMS](#4)  
+* [YYYY-MM-DD - SOMEDAY: FU course intro & RKI SARS-CoV-2 genomic surveillance intro](#5)  
 
 ## Instructors
 
@@ -75,6 +76,12 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | Time        | Container and WMS |
 | --          | --               |
 | 10:00-11:00 | [Container and WMS](day-container-wms/README.md) |
+
+### <a name="5"></a> SOMEDAY, DATE
+| Time        | SARS-CoV-2 Introduction |
+| --          | --               |
+| 10:00-11:00 | [Course intro](day-sc2-intro/README.md) |
+| 11:00-12:00 | [RKI Genomic Surveillance and SARS-CoV-2](day-sc2-intro/README.md) |
 
 
 
