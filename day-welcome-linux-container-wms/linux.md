@@ -235,4 +235,4 @@ conda activate envs/workshop
 # Which is placed in a folder envs/workshop
 ```
 
-Next: [Long-read Nanopore Introduction & Quality Control](nanopore.md)
+Next: [Container & WMS](container-wms.md)
