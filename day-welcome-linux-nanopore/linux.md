@@ -6,7 +6,7 @@
 * Another good resource: [Introduction to the UNIX command line](https://ngs-docs.github.io/2021-august-remote-computing/introduction-to-the-unix-command-line.html)
 * Cheat sheet for Bash: [github.com/RehanSaeed/Bash-Cheat-Sheet](https://github.com/RehanSaeed/Bash-Cheat-Sheet)
 
-A (very short) cheat sheet:
+### Small Cheat Sheet:
 ```bash
 # Print your user name
 echo $USER
@@ -18,7 +18,25 @@ cd ~  # <- the shortest version, I like this one
 ls
 # make a new directory called 'myfolder'
 mkdir myfolder
-# make conda environment and activate it
+# generate an empty file
+touch some-file.txt
+# show full content of a file
+cat some-file.txt
+# show first 10 lines of a file
+head some-file.txt
+# generate three emtpy files
+touch file1.txt file2.txt file3.txt
+# concatenate the content of files into a new file
+cat file1.txt file2.txt file3.txt > file123.txt
+# ... or via a wild card
+cat file?.txt > file123.txt
+# compress a file 
+gzip file123.txt # this will generate a compressed file 'sample.fastq.gz'
+# uncompress a gz file
+gunzip file123.txt.gz
+
+
+# make conda/mamba environment and activate it
 mamba create -n nanoplot
 conda activate nanoplot
 mamba install nanoplot
@@ -28,8 +46,90 @@ mamba create -p envs/nanoplot
 conda activate envs/nanoplot
 mamba install nanoplot
 # run a program
-NanoPlot reads.fq.gz ...
+NanoPlot --help
 ```
+
+### Practices and examples
+
+Here are some example commands and things you can try on your own. Always remember:
+
+* use _auto completion_ as often as possible, you can always use the _tab_/_tabulator_ key to get suggestions for a command you are typing and to auto-complete folder/file names and paths - it's much faster and less error prone! (preventing typos!)
+* prevent whitespaces in all folder and file names! You can use whitespaces in general, but it will complicate your work on a Linux system! Use `-`, `_`, etc... instead, e.g. `new-file.txt`
+* be always careful when you delete a folder or file! It's not as easy as on windows to get your data back!
+
+Now, open a terminal and try the following commands.
+
+```bash
+# when opening a new terminal, you always start in your home directory
+
+# the following command shows the current path you are located (remember the tree-like structure of folders on a linux system!)
+pwd
+
+# create a new directory
+mkdir testdir
+
+# change into that new directory
+cd testdir
+
+# check where you are located now
+pwd
+
+# generate a new empty file
+touch genome.fasta
+
+# list content of the current directory
+ls
+
+# list more details, in a human readable format
+ls -lah
+
+# write some content into that file
+printf ">Sequence\nATCGTACGTACGTAC\n" > genome.fasta
+
+# check content of the file
+cat genome.fasta
+
+# change to your home directory
+#     ~ is a short version of /home/$USER
+cd ~
+
+# check again the content of the file you created
+# now you have to type the full path to find the file! Use auto-complete! Here we use the so-called relative path
+cat testdir/genome.fasta
+
+# you can also use the absolute path
+cat /home/$USER/testdir/genome.fasta
+
+# Hint: $USER is a so-called variable. To see the content of a variable you can also use echo:
+echo $USER
+
+# in $USER your terminal stored the information about the current user running the session. You can also define your own variables, for example you could store the absolute path to your file in a variable for easier re-usage:
+GENOME=/home/$USER/testdir/genome.fasta
+cat $GENOME
+
+# please notice that we always use a leading $ sign when we want to access the content of a variable! See the difference:
+echo GENOME
+echo $GENOME
+
+# generate another file
+touch genome2.fasta
+
+# copy the file to the test folder
+cp genome2.fasta testdir/
+
+# list the content of the test folder
+ls -lah testdir/
+
+# remove the original file we just generated in your home dir 
+rm genome2.fasta
+
+# is it gone?
+ls -lah
+
+# however, remember we copied the file so a copy of the file we just deleted is still in the test folder
+ls -lah testdir/
+```
+
 
 ## (H)PC setup
 
@@ -71,11 +171,13 @@ exit
 ```
 Due to competing requests it may take some time until the requested resources can be provided by the system. Therefore, wait patiently until the prompt appears. Reducing requested resources might help as well.
 
+
 ## Install mamba (if done already on your machine: skip)
 
 * Mamba is a packaging manager that will help us to install bioinformatics tools and to handle their dependencies automatically
 * Mamba works together with the conda package manager, and makes installing packages faster
 * You will use the mamba command to create environments and install packages, and conda command for some other package management tasks like configuration and activating environments (yes it can be a bit confusing)
+* __Hint:__ You can create as many environments as you want! It is often convenied to have separate environments for separate tasks, pipelines, or even tools 
 * In the terminal enter:
 
 ```bash
