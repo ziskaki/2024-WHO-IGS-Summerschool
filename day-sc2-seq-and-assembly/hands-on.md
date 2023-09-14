@@ -253,7 +253,7 @@ To accurately clip the primer sequences, we need to know where they are located.
 ```bash
 # First, we download the primer BED scheme for Cleanplex scheme that was used
 # Change to another BED file if needed!
-wget --no-check-certificate https://osf.io/3hkd5/download -O cleanplex.amplicons.bedpe
+wget --no-check-certificate https://osf.io/4nztj/download -O cleanplex.amplicons.bedpe
 
 # It's important that the FASTA header of the reference genome 
 # and the IDs in the BED file match, let's check:
@@ -278,7 +278,7 @@ bamclipper.sh -b minimap2-illumina.sorted.bam -p cleanplex-corrected.amplicons.b
 ```bash
 # First, we download the primer BED scheme for the ARTIC V1200 scheme
 # Change to another BED file if needed!
-wget https://raw.githubusercontent.com/replikation/poreCov/master/data/external_primer_schemes/nCoV-2019/V1200/nCoV-2019.bed
+wget --no-check-certificate https://osf.io/3ks9b/download -O nCoV-2019.bed
 
 # It's important that the FASTA header of the reference genome 
 # and the IDs in the BED file match, let's check:
@@ -288,7 +288,8 @@ head nCoV-2019.bed
 # now we convert this BED file into a BEDPE file needed by BAMclipper.
 # The Illumina BED file we used above was already in the correct BEDPE format.
 # we download a python script to do so:
-wget https://raw.githubusercontent.com/hoelzer/bed2bedpe/master/primerbed2bedpe.py
+wget --no-check-certificate https://osf.io/3295h/download -O primerbed2bedpe.py
+
 # and run it
 python primerbed2bedpe.py nCoV-2019.bed --forward_identifier _LEFT --reverse_identifier _RIGHT -o nCoV-2019.bedpe
 
@@ -417,4 +418,4 @@ __Task:__ Check the output. Which lineage was annotated? Which version of `pango
 
 * `president`
 
-__Task:__ Read the manual page of [`president`](https://gitlab.com/RKIBioinformaticsPipelines/president) and try to run the tool on your own to check the quality of your reconstructed consensus sequence. 
+__Task:__ Read the manual page of [`president`](https://github.com/rki-mf1/president) and try to run the tool on your own to check the quality of your reconstructed consensus sequence. 
