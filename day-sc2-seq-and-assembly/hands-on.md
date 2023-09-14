@@ -62,15 +62,15 @@ _Note2_: It might be also more convenient to have separate environments for each
 
 ## Example input data
 
-You can obtain example read files for Illumina and Nanopore here:
+You can obtain example read files for Illumina and Nanopore [here](https://osf.io/9qkz5) or use the commands below:
 
 ```bash
 # Illumina
-wget --no-check-certificate https://osf.io/86ubg/download -O SARSCoV2-illumina.R1.fastq.gz
-wget --no-check-certificate https://osf.io/vgr3k/download -O SARSCoV2-illumina.R2.fastq.gz
+wget --no-check-certificate https://osf.io/yxep6/download -O SARSCoV2-illumina.R1.fastq.gz
+wget --no-check-certificate https://osf.io/qvzsh/download -O SARSCoV2-illumina.R2.fastq.gz
 
 # Nanopore
-wget --no-check-certificate https://osf.io/kf54a/download -O SARSCoV2-nanopore.fastq.gz
+wget --no-check-certificate https://osf.io/k9px6/download -O SARSCoV2-nanopore.fastq.gz
 ```
 
 **ATTENTION**: here we set now variables to point to the example data sets so we can just use that in the following commands. Adjust accordingly for your system and folder structure. 
@@ -171,9 +171,9 @@ First, we need a reference genome (in FASTA format) to map against. We will use 
 or for example via
 
 ```bash
-wget https://raw.githubusercontent.com/replikation/poreCov/master/data/external_primer_schemes/nCoV-2019/V1200/nCoV-2019.reference.fasta
+wget --no-check-certificate https://osf.io/kt4dq/download -O nCoV-2019.reference.fasta
 # we also download an index for later usage
-wget https://raw.githubusercontent.com/replikation/poreCov/master/data/external_primer_schemes/nCoV-2019/V1200/nCoV-2019.reference.fasta.fai
+wget --no-check-certificate https://osf.io/5eunp/download -O nCoV-2019.reference.fasta.fai
 ```
 
 **ATTENTION**: In our example we will use `minimap2` for both Illumina and Nanopore data. However, `minimap2` was initially developed with long-read alignment in mind. There is a short-read mode, but it might be beneficial to also use specialized short-read-mapper such as [BWA-MEM](https://github.com/lh3/bwa).
