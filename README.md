@@ -12,16 +12,21 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 
 ## Schedule links for the workshop
 
+### General
 * [YYYY-MM-DD - SOMEDAY: Welcome, Linux re-cap, container, and WMS](#0)  
+
+### Long-read bacteria genome reconstruction
 * [YYYY-MM-DD - SOMEDAY: Nanopore sequencing, data formats, and QC](#1)  
 * [YYYY-MM-DD - SOMEDAY: _De novo_ assembly and mapping](#2)  
 * [YYYY-MM-DD - SOMEDAY: Assembly polishing and variant calling](#3)  
-* [YYYY-MM-DD - SOMEDAY: FU course intro & RKI SARS-CoV-2 genomic surveillance intro](#4)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 sequencing & genome reconstruction](#5)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 evolution, mutation profiling & phenotypization](#6)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 pathogen evolution & genome-based incidence estimation](#7)  
-* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 phylogeny & outbreak investigation](#8)  
-* [YYYY-MM-DD - SOMEDAY: Final day, Miscellaneous](#x)  
+* [YYYY-MM-DD - SOMEDAY: Final day, Miscellaneous bacteria](#4)  
+
+### SARS-CoV-2 data science
+* [YYYY-MM-DD - SOMEDAY: FU course intro & RKI SARS-CoV-2 genomic surveillance intro](#5)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 sequencing & genome reconstruction](#6)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 evolution, mutation profiling & phenotypization](#7)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 pathogen evolution & genome-based incidence estimation](#8)  
+* [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 phylogeny & outbreak investigation](#9)  
 
 ## Instructors
 
@@ -81,13 +86,22 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:45-16:00 | Wrap-up & questions |
 
 ### <a name="4"></a> SOMEDAY, DATE
+| Time        | The Rest & Open Questions |
+| --          | --               |
+| 09:00-10:00 | Debriefing previous day |
+| 10:00-11:00 | [Miscellaneous (bacteria)](day-misc/README.md) |
+| 11:00-12:00 | [Hands-on & demo](day-misc/hands-on.md) |
+| 12:00-12:30 | Wrap-up & questions |
+
+
+### <a name="5"></a> SOMEDAY, DATE
 | Time        | SARS-CoV-2 Introduction |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
 | 10:00-11:00 | [FU course intro](day-sc2-intro/README.md) |
 | 11:00-12:00 | [RKI Genomic Surveillance and SARS-CoV-2](day-sc2-intro/README.md) |
 
-### <a name="5"></a> SOMEDAY, DATE
+### <a name="6"></a> SOMEDAY, DATE
 | Time        | SARS-CoV-2 sequencing & genome reconstruction |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
@@ -99,7 +113,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:00-15:45 | Continue practical session |
 | 15:45-16:00 | Wrap-up & questions |
 
-### <a name="6"></a> SOMEDAY, DATE
+### <a name="7"></a> SOMEDAY, DATE
 | Time        | SARS-CoV-2 evolution, mutation profiling & phenotypization |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
@@ -113,7 +127,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:00-15:45 | Continue practical session |
 | 15:45-16:00 | Wrap-up & questions |
 
-### <a name="7"></a> SOMEDAY, DATE
+### <a name="8"></a> SOMEDAY, DATE
 | Time        | SARS-CoV-2 pathogen evolution & incidence estimation |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
@@ -125,7 +139,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:00-15:45 | Continue practical session |
 | 15:45-16:00 | Wrap-up & questions |
 
-### <a name="8"></a> SOMEDAY, DATE
+### <a name="9"></a> SOMEDAY, DATE
 | Time        | SARS-CoV-2 phylogeny & outbreak investigation |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
@@ -139,13 +153,6 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 
 
 
-### <a name="x"></a> SOMEDAY, DATE
-| Time        | The Rest & Open Questions |
-| --          | --               |
-| 09:00-10:00 | Debriefing previous day |
-| 10:00-11:00 | [Miscellaneous](day-misc/README.md) |
-| 11:00-12:00 | [Hands-on & demo](day-misc/hands-on.md) |
-| 12:00-12:30 | Wrap-up & questions |
 
 
 
@@ -161,6 +168,6 @@ This course material is partly based on the following resources and on contribut
 * Workshop structure inspired by [https://github.com/cinemaparis/2023](https://github.com/cinemaparis/2023)
 * Some ONT intro slides from Josh Quick, [original](https://github.com/cinemaparis/2023/blob/main/day1-Tuesday/slides-Quick.pdf)
 * Nanopore long-read bioinformatics tutorial from [timkahlke](https://timkahlke.github.io/LongRead_tutorials)
-* Max von Kleist, RKI P5 and FU Berlin, content about NGS and SC2 data science
+* Max von Kleist, RKI P5 and FU Berlin, basically most content about sequencing and SC2 data science (evolution, epistasis, incidence esitmation, ...)
 * Hugues Richard, RKI MF1, content about SC2 risk assessment
 * Matt Huska & Denis Beslic, RKI MF1, content about SC2 outbreak detection & clustering
