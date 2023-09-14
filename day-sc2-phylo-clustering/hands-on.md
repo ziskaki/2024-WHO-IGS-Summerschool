@@ -28,9 +28,9 @@ conda activate tree
 ### Example data
 ```bash
 # get example data, a collection of different SARS-CoV-2 lineages, full genomes
-wget --no-check-certificate https://osf.io/yzn5e/download -O example-data.tar.gz
+wget --no-check-certificate https://osf.io/wpk75/download -O sc2-genomes-diff-lineages.tar.gz
 # extract the archive
-tar zxvf example-data.tar.gz
+tar zxvf sc2-genomes-diff-lineages.tar.gz
 ```
 
 ### Multiple sequence alignment
@@ -40,7 +40,7 @@ tar zxvf example-data.tar.gz
 ```bash
 # first we need a multiple FASTA file, which we can for example generate
 # by 'cat'ing together single FASTA files, like the ones in the example-data folder
-cat *.fasta > all.fasta
+cat sc2-genomes-diff-lineages/*.fasta > all.fasta
 
 # now we can calculate the alignment
 mafft --thread 4 all.fasta > alignment.fasta
@@ -74,5 +74,17 @@ Go to [https://www.iroki.net/](https://www.iroki.net/) and upload a tree file in
 
 Now we want to do a clustering of SARS-CoV-2 sequences based on their mutation profile using [https://github.com/rki-mf1/breakfast](https://github.com/rki-mf1/breakfast).
 
-TODO breakfast example, data in RKI nextcloud day5
+### Example data
+```bash
+# get example data, a collection of different SARS-CoV-2 lineages, full genomes
+wget --no-check-certificate https://osf.io/kxasc/download -O breakfast-clustering-data.tar.gz
+# extract the archive
+tar zxvf breakfast-clustering-data.tar.gz
+```
+
+**TODO Denis/Matt**
+
+* install breakfast
+* prepare input data (does probably involve covsonar? Or does the example data already have a cs DB?)
+* run the tool 
 
