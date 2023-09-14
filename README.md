@@ -121,7 +121,7 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 10:00-11:00 | [SARS-CoV-2 epistasis and variants](day-sc2-evolution/README.md) |
 | 12:00-13:00 | Lunch break |
 | 10:00-11:00 | [SARS-CoV-2 nomenclature](day-sc2-evolution/README.md) |
-| 11:00-12:00 | [Mutation profiling](day-sc2-evolution/README.md) |
+| 11:00-12:00 | [SARS-CoV-2 mutation profiling](day-sc2-evolution/README.md) |
 | 14:30-15:00 | Coffee break |
 | 13:00-14:30 | [Hands-on & demo](day-sc2-evolution/hands-on.md) |
 | 15:00-15:45 | Continue practical session |
