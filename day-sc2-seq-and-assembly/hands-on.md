@@ -4,6 +4,8 @@
 
 Here we describe basic tools and commands to process either Illumina or Nanopore sequencing data using SARS-CoV-2 amplification data as an example. The goal is to construct a genome sequence using a reference-based approach. **Althought the methodological steps are quite similar, both Illumina and Nanopore need different tools and parameters.**
 
+**Example data can be found here: [https://osf.io/9qkz5/](https://osf.io/9qkz5/)** and is also referenced in the used commands again. 
+
 ## Basic setup
 
 In this part, we will go through the different steps to generate from a FASTQ raw sequencing data file a SARS-CoV-2 consensus genome and lineage annotation. We will do this using the Linux system and command line interfance. 
