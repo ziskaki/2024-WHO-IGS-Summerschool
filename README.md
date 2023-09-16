@@ -28,6 +28,9 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 * [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 pathogen evolution & genome-based incidence estimation](#8)  
 * [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 phylogeny & outbreak investigation](#9)  
 
+### Long-read metagenomics
+* [YYYY-MM-DD - SOMEDAY: CONTENT](#10)
+
 ## Instructors
 
 * <...>, <...>, and <...>
