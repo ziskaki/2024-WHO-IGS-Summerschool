@@ -171,10 +171,10 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | Time        | Metagenome assembly, binning, and annotation |
 | --          | --               |
 | 09:00-10:00 | Debriefing previous day |
-| 10:00-11:00 | [Metagenome-assembled genomes (MAGs)](day-mags/README.md) |
-| 11:00-12:00 | [MAG quality and gene annotation](day-mags/README.md) |
+| 10:00-11:00 | [Metagenome-assembled genomes (MAGs)](day-metagenomic-assembly/README.md) |
+| 11:00-12:00 | [MAG quality and gene annotation](day-metagenomic-assembly/README.md) |
 | 12:00-13:00 | Lunch break |
-| 13:00-14:30 | [Hands-on & demo](day-mags/hands-on.md) |
+| 13:00-14:30 | [Hands-on & demo](day-metagenomic-assembly/hands-on.md) |
 | 14:30-15:00 | Coffee break |
 | 15:00-15:45 | Continue practical session |
 | 15:45-16:00 | Wrap-up & questions |

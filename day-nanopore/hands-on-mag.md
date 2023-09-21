@@ -1,166 +1,160 @@
 # Workshop: Long-read Nanopore Metagenomics, Data Formats & Quality Control
 
-**TODO CHANGE THE EXAMPLE FILES TO METAGENOMICS FILES, E.G. ZYMO**
-
-
-
-
-
 **Note**: If internet connection is slow, we can also distribute the example data via an USB stick (ask your instructor ;) ). 
 
-**General**: We will usually start with an "Hands-on" part that will guide you through some of the content from the lectures. Then, there is an "Excercise" part with more open questions. Lastly, there might be "Bonus" questions that require some additional knowledge and research. If you can not make it to the "Bonus", dont worry. The "Hands-on" and "Excercise" parts are most important and will be discussed the next day.
+**General**: We will usually start with an "Hands-on" part that will guide you through some of the content from the lectures. Then, there is an "Excercise" part with more open questions. 
 
-**Example data**: We will work with three different example data sets to showcase different usecases. 
-
-1) To match the _Salmonella_ Illumina data that you already analyzed, you will find corresponding nanopore data on your machines. You can analyze all files or pick one. Note that this nanopore sequencing data is already a few years old. It is also available from the European Nucleotide Archive (ENA, project ID https://www.ebi.ac.uk/ena/browser/view/PRJNA887350)
-2) Besides, we will use a public available _E. coli_ nanopore sample from [ENA](https://www.ebi.ac.uk/ena/browser/view/SRR12012232). 
-3) Our last example data set was recently sequenced with up-to-date nanopore chemistry (R10.4.1) and includes also raw signal FAST5 data.  
+**Example data**: We will work with one downsampled metagenomics long-read example data set to showcase different usecases. 
 
 :bulb: Think about a good and descriptive folder and file structure when working on the data!
 
-## Hands-on
-
-### Install and use analysis tools
-
-* **Note**: Bioinformatics tools are regulary updated and input parameters might change (use `--help` or `-h` to see the manual for a tool!)
-* Install most of them into our environment
-    * we will already install many tools that we will use over the next days!
-
-```bash
-mkdir envs
-mamba create -y -p envs/workshop fastqc nanoplot filtlong flye bandage minimap2 tablet racon samtools igv
-conda activate envs/workshop
-# test
-NanoPlot --help
-flye --version
-```
-
-__Reminder: You can also install specific versions of a tool!__
-* important for full reproducibility
-* e.g. `mamba install flye==2.9.0`
-* per default, `mamba` will try to install the newest tool version based on your configured channels and system architecture and dependencies to other tools
-
-### Create a folder for the hands-on work
+## Create a folder for the hands-on work
 
 Below are just example paths, you can also adjust them and use other folder names! Assuming you are on a Linux system on a local machine (laptop, workstation):
 
 ```sh
 # Switch to a path on your system where you want to store your data and results
-cd /scratch/$USER
+cd /home/$USER
 # Create new folder
-mkdir nanopore-workshop
-cd nanopore-workshop
+mkdir 2023-ont-metagenomics-workshop
+cd 2023-ont-metagenomics-workshop
 ```
 
-### Get some example long-read data 
+It's always important that you keep a clean and descriptive folder structure when doing bioinformatics or data science in general. Let's start with creating a project directory. First, change to some location on your file system where you want to store the data and create the project folder, then:
 
-Get some example data. For example, find some public Nanopore read data for _E. coli_ on  [ENA](https://www.ebi.ac.uk/ena/browser/view/SRR12012232).
+**Attention: we will always start from this folder doing the analysis! Double check, e.g. via `pwd`, if you are in the correct folder on your system!**
+
+## Install and use analysis tools
+
+- **Note**: Bioinformatics tools are regulary updated and input parameters might change (use `--help` or `-h` to see the manual for a tool!)
+- Install most of them into our environment
+    - we will already install many tools that we will use over the next days!
 
 ```bash
-wget "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR120/032/SRR12012232/SRR12012232_1.fastq.gz"
-ls -lah SRR12012232_1.fastq.gz
-# You just downloaded 397MB of compressed Nanopore raw reads
-# Let's place this file in a new folder to keep a clean folder structure
-# Are you still in your workshop folder that you just created? 
-pwd
-# If so, make a new folder and move/rename the downloaded file:
-mkdir input-data
-mv SRR12012232_1.fastq.gz input-data/eco.nanopore.fastq.gz
-# double-check that everything is in place:
-ls -lah input-data/
-# all good? Let's move on to QC!
+mkdir envs
+mamba create -y -p envs/qc nanoplot filtlong minimap2 samtools igv
+conda activate envs/qc
+# test
+NanoPlot --help
+minimap2 --version
 ```
 
-### Quality control (NanoPlot)
+**Reminder: You can also install specific versions of a tool!**
+
+- important for full reproducibility
+- e.g. `mamba install minimap2==2.26`
+- per default, `mamba` will try to install the newest tool version based on your configured channels and system architecture and dependencies to other tools
+
+## Get example long-read Nanopore data of a mock community
+
+We will use the [ZymoBIOMICS Microbial Community Standard II, Log Distribution (CSII)](https://www.zymoresearch.de/products/zymobiomics-microbial-community-dna-standard-ii-log-distribution) as example. The CSII is a mixture of the genomic DNA of eight bacterial (three Gram-negative and five Gram-positive) and two fungal strains covering a wide range of abundances, with the following theoretical composition: _Listeria monocytogenes_ - 89.1%, _Pseudomonas aeruginosa_ - 8.9%, _Bacillus subtilis_ - 0.89%, _Saccharomyces cerevisiae_ - 0.89%, _Escherichia coli_ - 0.089%, _Salmonella enterica_ - 0.089%, _Lactobacillus fermentum_ - 0.0089%, _Enterococcus faecalis_ - 0.00089%, _C\_ryptococcus neoformans_ - 0.00089%, and _Staphylococcus aureus_ - 0.000089%.
+
+We isolated DNA from the Zymo community mix yielding 660 ng/~73 µl recovered with EtOH (219 µl) precipitation + 3M NaOAc (1/10 vol ~29.3 µl) in 13 µl H2O. We used the **ONT Rapid Barcoding Kit** without bead step (SQK-RBK004) for library preparation, which resulted in 11 µl DNA input for a "standard" MinION flow cell (~400 ng input). The prepared library was sequenced on a **MinION with an R9.4.1 flow cell** (FLO-MIN106). A laptop computer with an Intel Core i5-10400H CPU and NVIDIA GeForce RTX 5000, 16 GB GDDR6 GPU was used for basecalling using MinKNOW (v22.08.4) with the **Super accurate basecalling model (SUP)**. The used **barcode was 01**.
+
+After basecalling, we combined all `fastq_pass` reads yielding a 4.5 GB FASTQ file. For this workshop, we downsampled the FASTQ file down to 10% of the oiginal reads (345 MB) using the following command (**you dont have to do that!**):
 
 ```bash
-NanoPlot -t 4 --fastq input-data/eco.nanopore.fastq.gz --title "Raw reads" \
-    --color darkslategrey --N50 --loglength -f png -o nanoplot/raw
+# downsample to use as example data set, dont run this!
+conda activate seqkit
+zcat barcode01.fastq.gz | seqkit sample -p 0.1 -o zymo-2022-barcode01-perc10.fastq.gz
 ```
+
+The downsampled FASTQ file can be downloaded [here](https://osf.io/buajf) or via this command:
+
+```bash
+mkdir reads
+cd reads
+wget https://osf.io/buajf/download -O zymo-2022-barcode01-perc10.fastq.gz
+cd ..
+```
+
+Let's download the example data and have a look on the FASTQ file! We place it in a `reads` folder in your working directory! This should then look like this:
+
+```bash
+2023-ont-metagenomics-workshop/reads/zymo-2022-barcode01-perc10.fastq.gz
+```
+
+## Quality control (NanoPlot)
+
+```bash
+# assuming you are in your working dir: 2023-ont-metagenomics-workshop and the "qc" environment is activated
+NanoPlot -t 4 --fastq reads/zymo-2022-barcode01-perc10.fastq.gz --title "Raw reads" --color darkslategrey --N50 --loglength -f png -o nanoplot/raw
+```
+
 [Publication](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty149/4934939) | [Code](https://github.com/wdecoster/NanoPlot)
 
-**Note**: The `\` at the end of a line is only for convenience to write a long command into several lines. It tells the command-line that all lines still belong together although they are separated by "enter" keys. However, if you type all of the command, i.e., paths etc, in one line do not copy/type the backslash at the end of the lines.
-
-### Read filtering (Filtlong)
+## Read filtering (Filtlong)
 
 ```bash
 # Note: we use 1 kb as the minimum length cutoff as an example. For your "real" samples other parameters might be better. Do QC before. 
-filtlong --min_length 1000 --keep_percent 90 \
-    --target_bases 500000000 input-data/eco.nanopore.fastq.gz > eco-filtered.fastq
+filtlong --min_length 1000 reads/zymo-2022-barcode01-perc10.fastq.gz > reads/zymo-2022-barcode01-perc10.filtered.fastq
 
 # Check the quality again:
-NanoPlot -t 4 --fastq eco-filtered.fastq --title "Filtered reads" \
-    --color darkslategrey --N50 --loglength -f png -o nanoplot/clean
+NanoPlot -t 4 --fastq reads/zymo-2022-barcode01-perc10.filtered.fastq --title "Filtered reads" --color darkslategrey --N50 --loglength -f png -o nanoplot/filtered
 ```
+
 [Code](https://github.com/rrwick/Filtlong)
 
-### Container and WMS (brief intro)
+## Blast some reads online
 
-Check the small example at [https://github.com/hoelzer/nf_example](https://github.com/hoelzer/nf_example). Clone the repository using `git`. 
+TODO
 
-Then investigate the `Dockerfile` and try to build the container image locally using `docker build .`. Remember that you can also give your container image a specific name using the `-t` parameter. 
 
-Install `nextflow`, for example directly from [https://nextflow.io/](https://nextflow.io/) or using `conda` or `mamba`. 
+## Download reference genomes
 
-Try to get the little `nextflow` example workflow running. The workflow is using `sourmash` so you either need to install the dependency or provide an available container image, see these [code lines](https://github.com/hoelzer/nf_example/blob/master/main.nf#L14-L18). 
+We know which species are in our sample. So let's download reference genomes for them!
+
+Also, later, we want to build a custom database for the 10 species included in our mock community, so let's download them from NCBI first:
+
+```bash
+# make a folder to store the genome FASTAs
+mkdir -p reference-genomes
+cd reference-genomes
+
+# Now we download reference genomes for the 10 target species from NCBI
+## Bacillus subtilis
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.fna.gz
+## Enterococcus faecalis
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/393/015/GCF_000393015.1_Ente_faec_T5_V1/GCF_000393015.1_Ente_faec_T5_V1_genomic.fna.gz
+## Escherichia coli
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
+## Lactobacillus fermentum
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/029/961/225/GCF_029961225.1_ASM2996122v1/GCF_029961225.1_ASM2996122v1_genomic.fna.gz
+## Listeria monocytogenes
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/196/035/GCF_000196035.1_ASM19603v1/GCF_000196035.1_ASM19603v1_genomic.fna.gz
+## Pseudomonas aeruginosa
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/765/GCF_000006765.1_ASM676v1/GCF_000006765.1_ASM676v1_genomic.fna.gz
+## Salmonella enterica
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/945/GCF_000006945.2_ASM694v2/GCF_000006945.2_ASM694v2_genomic.fna.gz
+## Staphylococcus aureus
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/013/425/GCF_000013425.1_ASM1342v1/GCF_000013425.1_ASM1342v1_genomic.fna.gz
+## Saccharomyces cerevisiae
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/146/045/GCF_000146045.2_R64/GCF_000146045.2_R64_genomic.fna.gz
+## Cryptococcus neoformans
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/091/045/GCF_000091045.1_ASM9104v1/GCF_000091045.1_ASM9104v1_genomic.fna.gz
+
+# now we extract the FASTA files
+gunzip *.fna.gz
+
+# change back to the main working directory
+cd ..
+```
+
+## Mapping
+
+TODO Lets map the reads against some example reference genome. Then samtools and IGV.
+
+
+
+
 
 
 ## Excercise
 
-1) Investigate the content of the FASTQ file you downloaded: `input-data/eco.nanopore.fastq.gz`. What are the first four lines telling you? What do you need to do to make the content of the file "human readable"? 
-2) Try `FastQC` on the _E. coli_ example FASTQ. Inspect the output. What is the GC content? 
-3) Now, use the Nanopore example data for _Salmonella_ that you either already have on your system or can download from [ENA](https://www.ebi.ac.uk/ena/browser/view/PRJNA887350):
+Now check your own data! Perform QC. How does your own data compare to the example data in erms of yield and read length?
 
-There are three Nanopore samples, you can work on all of them or pick one! The data is a bit older, from 2019 and was sequenced on a MinION flow cell (FLO-MIN106). Basecalling was done with the `FAST` basecalling model. 
 
-* 8640-Nanopore, ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/090/SRR21833890/SRR21833890_1.fastq.gz (928 MB file size)
-* 9866-12-Nanopore, ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/071/SRR21833871/SRR21833871_1.fastq.gz (2.6 GB)
-* 8640-41-Nanopore, ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/078/SRR21833878/SRR21833878_1.fastq.gz (1.5 GB)
-
-For samples from the same study you analyzed short-read Illumina data. The paired-end Illumina data that corresponds to the Nanopore data are:
-
-* 8640-Illumina, ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/089/SRR21833889/SRR21833889_1.fastq.gz and ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/089/SRR21833889/SRR21833889_2.fastq.gz (2x 380 MB file size)
-* 9866-12-Illumina, ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/088/SRR21833888/SRR21833888_1.fastq.gz and ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/088/SRR21833888/SRR21833888_2.fastq.gz (2x 300 MB)
-* 8640-41-Illumina, ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/077/SRR21833877/SRR21833877_1.fastq.gz and ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR218/077/SRR21833877/SRR21833877_2.fastq.gz (2x 77 MB)
-
-| Sample ID | Nanopore read ID | Illumina read ID |
-| -- | -- |  -- |
-| 8640 | SRR21833890 | SRR21833889 |
-| 9866-12 | SRR21833871 | SRR21833888 |
-| 8640-41 | SRR21833878 | SRR21833877 |
-
-But we dont need the Illumina data now, remember it for later.
-
-Pick one of the _Salmonella_ nanopore FASTQ files. Create a decent folder structure to work with the data. Check the quality. Is read length filtering necessary? If so, do a read length filtering and compare the results. How long are the reads? Do you see any problems? Also try `fastqc` with the appropriate long-read parameter on your sample. What is the GC content? Does it match the expected GC content of _Salmonella_?
-
-## Bonus 1
-
-1) Download another data set (attention, 1.8 GB): 
-```bash
-wget --no-check-certificate https://osf.io/7f8jz/download -O 2023-08-nanopore-workshop-example-bacteria.zip
-```
-(or copy it from an USB stick). 
-
-Make a new subfolder in `nanopore-workshop` (or however you named your workshop directory) and place the downloaded `zip` archive here. Unzip the archive you just downloaded. Inspect the content. There is a MinKNOW summary report HTML file. Open it and inspect it. What can you tell about the nanopore sequencing run? Did it work well? 
-
-2) Investigate the quality using `NanoPlot` and, if you think it's necessary, lenght-filter the FASTQ files. **Note** that you can combine the separate FASTQ files first into a single FASTQ file using `cat`! All four FASTQ files belong to the same barcode so it is safe to combine them into one file.  
-3) Use `PycoQC` to generate qc plots for the data set. Install `PycoQC` via Mamba or use an available environment. In difference to `NanoPlot`, `PycoQC` needs as input a file called `sequencing_summary.txt` or similar. This is provided after the basecalling alongside with the FASTQ files. (_Note that the `sequencing_summary.txt` was gziped, extract it first!_)
-
-**Note on installing `PycoQC`**: On my system it was a pain to install `PycoQC`. I finally managed using mamba:
-
-```bash
-mamba create -y -p envs/pycoqc pycoqc
-```
-
-If that doesn't work you might need to:
-
-* creating a new conda environment and installing `mamba` and Python version 3.7 into it
-* activating the new environment
-* then installing `PycoQC` and explicitly defining the newest version 2.5.2 (as of 2023-08-07)
-
-Older versions might not work correctly with the input FAST5 data! Maybe you have better luck in installing a newer version of `PycoQC` w/o the hussle... 
-
-## Bonus 2 (and a little detour into containers)
+## Bonus (and a little detour into containers)
 
 Do basecalling by your own. 
 
@@ -170,7 +164,7 @@ This might not work well on all systems. A good internet connection is needed as
 
 Another nice overview (even though might be slightly outdated) is provided here: [Basecalling with Guppy](https://timkahlke.github.io/LongRead_tutorials/BS_G.html).
 
-1) You can also find raw signal FAST5 data in the downloaded folder from _Bonus 1)_. Re-basecall the signal data to generate a FASTQ output with `guppy`. Chose an appropriate basecalling model (check for details in the MinKNOW report). Unfortunately, `guppy` can not be installed via Conda and is only provided via the ONT community which needs an account. However, the tool can be installed in a so-called Docker container and then run. If you never used [Docker](https://www.docker.com/products/docker-desktop/), here are some [introductory slides](content/container-wms.pdf). A few other good resources:
+From your own sequencing run, you should find raw signal FAST5 data. Re-basecall the signal data to generate a FASTQ output with `guppy`. Chose an appropriate basecalling model (check for details in the MinKNOW report). Unfortunately, `guppy` can not be installed via Conda and is only provided via the ONT community which needs an account. However, the tool can be installed in a so-called Docker container and then run. If you never used [Docker](https://www.docker.com/products/docker-desktop/), here are some [introductory slides](content/container-wms.pdf). A few other good resources:
 
 * [The dark secret about containers in Bioinformatics](https://www.happykhan.com/posts/dark-secret-about-containers/)
 * [Container Introduction Training](https://github.com/sib-swiss/containers-introduction-training)
