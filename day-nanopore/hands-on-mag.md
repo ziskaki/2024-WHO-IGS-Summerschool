@@ -47,7 +47,18 @@ minimap2 --version
 
 ## Get example long-read Nanopore data of a mock community
 
-We will use the [ZymoBIOMICS Microbial Community Standard II, Log Distribution (CSII)](https://www.zymoresearch.de/products/zymobiomics-microbial-community-dna-standard-ii-log-distribution) as example. The CSII is a mixture of the genomic DNA of eight bacterial (three Gram-negative and five Gram-positive) and two fungal strains covering a wide range of abundances, with the following theoretical composition: _Listeria monocytogenes_ - 89.1%, _Pseudomonas aeruginosa_ - 8.9%, _Bacillus subtilis_ - 0.89%, _Saccharomyces cerevisiae_ - 0.89%, _Escherichia coli_ - 0.089%, _Salmonella enterica_ - 0.089%, _Lactobacillus fermentum_ - 0.0089%, _Enterococcus faecalis_ - 0.00089%, _C\_ryptococcus neoformans_ - 0.00089%, and _Staphylococcus aureus_ - 0.000089%.
+We will use the [ZymoBIOMICS Microbial Community Standard II, Log Distribution (CSII)](https://www.zymoresearch.de/products/zymobiomics-microbial-community-dna-standard-ii-log-distribution) as example. The CSII is a mixture of the genomic DNA of eight bacterial (three Gram-negative and five Gram-positive) and two fungal strains covering a wide range of abundances, with the following theoretical composition: 
+
+* _Listeria monocytogenes_ - 89.1%
+* _Pseudomonas aeruginosa_ - 8.9%
+* _Bacillus subtilis_ - 0.89%
+* _Saccharomyces cerevisiae_ - 0.89%
+* _Escherichia coli_ - 0.089%
+* _Salmonella enterica_ - 0.089%
+* _Lactobacillus fermentum_ - 0.0089%
+* _Enterococcus faecalis_ - 0.00089%
+* _Cryptococcus neoformans_ - 0.00089%
+* _Staphylococcus aureus_ - 0.000089%
 
 We isolated DNA from the Zymo community mix yielding 660 ng/~73 µl recovered with EtOH (219 µl) precipitation + 3M NaOAc (1/10 vol ~29.3 µl) in 13 µl H2O. We used the **ONT Rapid Barcoding Kit** without bead step (SQK-RBK004) for library preparation, which resulted in 11 µl DNA input for a "standard" MinION flow cell (~400 ng input). The prepared library was sequenced on a **MinION with an R9.4.1 flow cell** (FLO-MIN106). A laptop computer with an Intel Core i5-10400H CPU and NVIDIA GeForce RTX 5000, 16 GB GDDR6 GPU was used for basecalling using MinKNOW (v22.08.4) with the **Super accurate basecalling model (SUP)**. The used **barcode was 01**.
 
