@@ -7,8 +7,8 @@ We will continue with the same example data from [ZymoBIOMICS Microbial Communit
 We want to use Kraken 2 for read classification. Let's install it:
 
 ```bash
-mkdir envs
-mamba create -p envs/kraken2 -c bioconda kraken2
+mkdir -p envs
+mamba create -y -p envs/kraken2 -c bioconda kraken2
 conda activate envs/kraken2 
 ```
 
@@ -30,7 +30,7 @@ In interacting with Kraken 2, you should not have to directly reference any of t
 
 Now, we build a custom database for the 10 species included in our mock community. And one with 9 species skipping _Listeria_.
 
-**Note:** If this does not work, pre-build kraken2 databases of the 10 and 9 species can be downloaded [here](https://osf.io/prq82) and [here](https://osf.io/n8kvx). After download, extract them via `tar zxvf mock10.tar.gz` etc.
+**Note:** If this does not work, pre-build kraken2 databases of the 10 and 9 species can be downloaded [here](https://osf.io/prq82) and [here](https://osf.io/n8kvx). After download, place them in the correct folder and extract them via `tar zxvf mock10.tar.gz` etc.
 
 ```bash
 # create a folder to store the database(s)
@@ -126,6 +126,7 @@ mv gtdb_r89_54k_kraken2_16gb.tar databases/pre-build/gtdb
 To classify a set of sequences, use the `kraken2` command. We will now start classifying the example
 
 ```bash
+# navigat to your main work dir
 # create an output folder
 mkdir kraken-results
 kraken2 --threads 4 --db databases/custom/mock10 --output kraken-results/mock10.kraken.out --report kraken-results/mock10.kraken.report reads/zymo-2022-barcode01-perc10.filtered.fastq
