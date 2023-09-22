@@ -108,9 +108,7 @@ Further reading: [A typical CheckM workflow](https://github.com/Ecogenomics/Chec
 mkdir tmp
 # we use --reduced_tree to save RAM
 checkm lineage_wf --tmpdir tmp -t 4 --reduced_tree -x fa binning/metabat-bins checkm-result
-
-checkm bin_qa_plot --image_type png -x fa checkm checkm/bins/ checkm_plot
-
-        checkm tree_qa ${name}_checkm > taxonomy.txt
-        mv ${name}_checkm_plot/bin_qa_plot.png bin_qa_plot.png
+checkm tree_qa checkm-result
+# unfortunately, the following command was not working for me - deprecated in latest CheckM version?
+# checkm bin_qa_plot --image_type png -x fa checkm checkm/bins/ checkm_plot
 ```
