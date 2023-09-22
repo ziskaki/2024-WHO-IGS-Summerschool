@@ -101,6 +101,8 @@ Inspect the output. How many "bins" do you have?
 
 Now one important questions is: how good and complete are your MAGs? This can be, for example, assessed with [CheckM](https://github.com/Ecogenomics/CheckM/wiki).
 
+Further reading: [A typical CheckM workflow](https://github.com/Ecogenomics/CheckM/wiki/Quick-Start#typical-workflow).
+
 ```bash
 # we need a folder for temporary files
 mkdir tmp
