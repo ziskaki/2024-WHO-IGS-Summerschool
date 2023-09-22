@@ -28,6 +28,11 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 * [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 pathogen evolution & genome-based incidence estimation](#8)  
 * [YYYY-MM-DD - SOMEDAY: SARS-CoV-2 phylogeny & outbreak investigation](#9)  
 
+### Long-read metagenomics
+* [YYYY-MM-DD - SOMEDAY: Metagenomic read classification](#10)
+* [YYYY-MM-DD - SOMEDAY: Metagenome assembly, binning, qc, and annotation](#11)
+
+
 ## Instructors
 
 * <...>, <...>, and <...>
@@ -56,7 +61,8 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 13:00-13:30 | [Nanopore basecalling & data fromats](day-nanopore/README.md) |
 | 13:30-14:00 | [Nanopore QC](day-nanopore/README.md) |
 | 14:00-14:30 | Coffee break |
-| 14:30-16:00 | [Hands-on & demo](day-nanopore/hands-on.md) |
+| 14:30-16:00 | [Hands-on & demo (ONT isolate)](day-nanopore/hands-on.md) |
+| 14:30-16:00 | [Hands-on & demo (metagenomics)](day-nanopore/hands-on-metagenomics.md) |
 | 16:00-16:15 | Wrap-up & questions |
 
 ### <a name="2"></a> SOMEDAY, DATE
@@ -151,9 +157,28 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 15:00-15:45 | Continue practical session |
 | 15:45-16:00 | Wrap-up & questions |
 
+### <a name="10"></a> SOMEDAY, DATE
+| Time        | Metagenomic read classification |
+| --          | --               |
+| 09:00-10:00 | Debriefing previous day |
+| 10:00-12:00 | [Metagenomic read classification](day-metagenomic-classification/README.md) |
+| 12:00-13:00 | Lunch break |
+| 13:00-14:30 | [Hands-on & demo](day-metagenomic-classification/hands-on.md) |
+| 14:30-15:00 | Coffee break |
+| 15:00-15:45 | Continue practical session |
+| 15:45-16:00 | Wrap-up & questions |
 
-
-
+### <a name="11"></a> SOMEDAY, DATE
+| Time        | Metagenome assembly, binning, and annotation |
+| --          | --               |
+| 09:00-10:00 | Debriefing previous day |
+| 10:00-11:00 | [Metagenome-assembled genomes (MAGs)](day-metagenomic-assembly/README.md) |
+| 11:00-12:00 | [MAG quality and gene annotation](day-metagenomic-assembly/README.md) |
+| 12:00-13:00 | Lunch break |
+| 13:00-14:30 | [Hands-on & demo](day-metagenomic-assembly/hands-on.md) |
+| 14:30-15:00 | Coffee break |
+| 15:00-15:45 | Continue practical session |
+| 15:45-16:00 | Wrap-up & questions |
 
 
 
@@ -162,12 +187,14 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 
 This course material is partly based on the following resources and on contributions from great people (no specific order):
 
+* Martin Hoelzer, RKI MF1, content about Linux, container, Nextflow, sequencing, genomic surveillance & glueing everything together
 * Sebastian "Raverjay" Krautwurst, FSU Jena, some Linux and ONT content
-* Stephan Fuchs, RKI MF1, some Linux and Assembly content 
+* Stephan Fuchs, RKI MF1, some Linux and Assembly content, Slides on SARS-CoV-2 nomenclature & phylogeny 
 * Matt Huska, RKI MF1, automatic test script for all md code blocks using [codedown](https://github.com/earldouglas/codedown) and general help
 * Workshop structure inspired by [https://github.com/cinemaparis/2023](https://github.com/cinemaparis/2023)
 * Some ONT intro slides from Josh Quick, [original](https://github.com/cinemaparis/2023/blob/main/day1-Tuesday/slides-Quick.pdf)
 * Nanopore long-read bioinformatics tutorial from [timkahlke](https://timkahlke.github.io/LongRead_tutorials)
 * Max von Kleist, RKI P5 and FU Berlin, basically most content about sequencing and SC2 data science (evolution, epistasis, incidence esitmation, ...)
+* Maureen Smith, Maria Trofimova, RKI P5 and FU Berlin, content on Incidence estimation
 * Hugues Richard, RKI MF1, content about SC2 risk assessment
 * Matt Huska & Denis Beslic, RKI MF1, content about SC2 outbreak detection & clustering
