@@ -65,7 +65,7 @@ We isolated DNA from the Zymo community mix yielding 660 ng/~73 µl recovered wi
 After basecalling, we combined all `fastq_pass` reads yielding a 4.5 GB FASTQ file. For this workshop, we downsampled the FASTQ file down to 10% of the oiginal reads (345 MB) using the following command (**you dont have to do that!**):
 
 ```bash
-# downsample to use as example data set, dont run this!
+# downsampling was used to reduce the size of the example data set, dont run this!
 conda activate seqkit
 zcat barcode01.fastq.gz | seqkit sample -p 0.1 -o zymo-2022-barcode01-perc10.fastq.gz
 ```
@@ -108,8 +108,15 @@ NanoPlot -t 4 --fastq reads/zymo-2022-barcode01-perc10.filtered.fastq --title "F
 
 ## Blast some reads online
 
-TODO
+Let's check the first read in the data set:
 
+```bash
+head -4 reads/zymo-2022-barcode01-perc10.filtered.fastq
+```
+
+Copy the nucleotide sequence and [BLAST online](https://blast.ncbi.nlm.nih.gov/Blast.cgi) (using Nucleotide BLAST search).
+
+What do you found? Check also the alignment. Do you see differences (errors?).
 
 ## Download reference genomes
 
@@ -151,18 +158,53 @@ gunzip *.fna.gz
 cd ..
 ```
 
-## Mapping
+### Mapping (minimap2)
 
-TODO Lets map the reads against some example reference genome. Then samtools and IGV.
+Now, we want to map the long reads to one of the reference genomes and visualize the data. As an example, we select the _Listeria_ reference genome. 
 
+```bash
+# navigat to your main project dir and create a new output folder for mappings
+mkdir mapping
+minimap2 -ax map-ont reference-genomes/GCF_000196035.1_ASM19603v1_genomic.fna reads/zymo-2022-barcode01-perc10.filtered.fastq > mapping/zymo-2022-listeria.sam
+```
+[Publication](https://doi.org/10.1093/bioinformatics/bty191) | [Code](https://github.com/lh3/minimap2)
 
+Inspect the resulting SAM file. Check the [SAM format specification](https://samtools.github.io/hts-specs/SAMv1.pdf).
 
+### Visualization of the mapping (IGV)
+
+```bash
+# first, we need to convert the SAM file into a sorted BAM file to load it subsequently in IGV
+samtools view -bS mapping/zymo-2022-listeria.sam | samtools sort -@ 4 > mapping/zymo-2022-listeria.sorted.bam  
+samtools index mapping/zymo-2022-listeria.sorted.bam
+
+# start IGV browser and load the assembly (FASTA) and BAM file, inspect the output
+igv &
+```
+
+### Alternative: Visualization of mapping (Tablet)
+
+```bash
+# open the GUI
+tablet &
+
+# load mapping file as 'primary assembly'
+# ->  mapping/zymo-2022-listeria.sam
+
+# load assembly file as 'Reference/consensus file'
+# ->  reference-genomes/GCF_000196035.1_ASM19603v1_genomic.fna
+```
+[Publication](http://dx.doi.org/10.1093/bib/bbs012) | [Code](https://ics.hutton.ac.uk/tablet/)
+
+__Alternative ways to visualize such a mapping are given by (commercial software) such as Geneious or CLC Genomic Workbench.__
 
 
 
 ## Excercise
 
 Now check your own data! Perform QC. How does your own data compare to the example data in erms of yield and read length?
+
+**It's a good idea to make a new project folder for working on a new data set!**
 
 
 ## Bonus (and a little detour into containers)
