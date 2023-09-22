@@ -102,11 +102,13 @@ Inspect the output. How many "bins" do you have?
 Now one important questions is: how good and complete are your MAGs? This can be, for example, assessed with [CheckM](https://github.com/Ecogenomics/CheckM/wiki).
 
 ```bash
-        mkdir temporary
-        mkdir ${name}_bin
-        mv *.fa* ${name}_bin/
-checkm lineage_wf --tmpdir temporary --pplacer_threads 4 -t 4 --reduced_tree -x fa binning/metabat-bins checkm > summary.txt
-        checkm bin_qa_plot --image_type png -x fa ${name}_checkm ${name}_bin ${name}_checkm_plot
+# we need a folder for temporary files
+mkdir tmp
+# we use --reduced_tree to save RAM
+checkm lineage_wf --tmpdir tmp -t 4 --reduced_tree -x fa binning/metabat-bins checkm-result
+
+checkm bin_qa_plot --image_type png -x fa checkm checkm/bins/ checkm_plot
+
         checkm tree_qa ${name}_checkm > taxonomy.txt
         mv ${name}_checkm_plot/bin_qa_plot.png bin_qa_plot.png
 ```
