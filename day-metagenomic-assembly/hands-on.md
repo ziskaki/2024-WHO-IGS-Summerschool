@@ -14,14 +14,14 @@ First, we need to create a new environment and install the tools:
 
 ```bash
 # change to your project dir
-mamba create -p envs/assembly -c bioconda flye bandage minimap2 samtools metabat2 checkm-genome 
+mamba create -y -p envs/assembly -c bioconda flye bandage minimap2 samtools metabat2 checkm-genome 
 conda activate envs/assembly
 ```
 
 Now, let's run the metagenome assembly:
 
 ```bash
-# run the assembly, this will take a bit time
+# run the assembly, this will take a bit time (if possible increase threads)
 flye --nano-raw reads/zymo-2022-barcode01-perc10.filtered.fastq -o flye-output -t 8 --meta
 # the final output genome assembly will be in flye-output/assembly.fasta
 ```
