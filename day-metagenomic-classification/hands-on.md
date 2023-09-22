@@ -30,8 +30,6 @@ In interacting with Kraken 2, you should not have to directly reference any of t
 
 Now, we build a custom database for the 10 species included in our mock community. And one with 9 species skipping _Listeria_.
 
-**Note:** If this does not work, pre-build kraken2 databases of the 10 and 9 species can be downloaded [here](https://osf.io/prq82) and [here](https://osf.io/n8kvx). After download, place them in the correct folder and extract them via `tar zxvf mock10.tar.gz` etc.
-
 ```bash
 # create a folder to store the database(s)
 mkdir -p databases/custom
@@ -43,7 +41,7 @@ kraken2-build --download-taxonomy --db mock10
 # 40 GB will be downloaded and multiple files. But we need this to match our target genomes to the NCBI taxonomy.
 
 # Now we add each of the 10 reference genomes to this library. You can do this one by one or using a so-called "for loop"
-for GENOME in reference-genomes/*.fna; do
+for GENOME in ../../reference-genomes/*.fna; do
     kraken2-build --add-to-library $GENOME --db mock10
 done
 
@@ -57,7 +55,7 @@ mkdir mock9
 ln -s mock10/taxonomy mock9/
 
 # now we add the genomes again to the mock9 library but skipping the one for Listeria
-for GENOME in reference-genomes/*.fna; do
+for GENOME in ../../reference-genomes/*.fna; do
     if [[ $GENOME != "GCF_000196035.1_ASM19603v1_genomic.fna" ]]; then
         kraken2-build --add-to-library $GENOME --db mock9
     fi
@@ -75,7 +73,21 @@ kraken2-build --clean --db mock10
 kraken2-inspect --db mock10
 ```
 
-### Build a standard Kraken2 database (we will not do that during the course)
+**Note:** If this does not work, pre-build kraken2 databases of the 10 and 9 species can be downloaded [here](https://osf.io/prq82) and [here](https://osf.io/n8kvx). After download, place them in the correct folder and extract them via `tar zxvf mock10.tar.gz` etc. For example (**only do this if you did not build the databases yourself!**):
+
+```bash
+# create a folder to store the database(s)
+mkdir -p databases/custom
+cd databases/custom
+
+wget https://osf.io/prq82/download -O mock10.tar.gz
+wget https://osf.io/n8kvx/download -O mock9.tar.gz
+
+tar zxvf mock10.tar.gz
+tar zxvf mock9.tar.gz
+```
+
+### Build a standard Kraken 2 database (we will not do that during the course)
 
 To create the standard Kraken 2 database, you can use the following command:
 
@@ -117,7 +129,7 @@ But there are also other databases, such as the Genome-Taxnomy Database ([GTDB](
 # https://bridges.monash.edu/articles/dataset/GTDB_r89_54k/8956970, e.g. we can download a 16GB capped version of the GTDB r89 54k dereplicated kraken2 database from this resource
 # more information: https://github.com/rrwick/Metagenomics-Index-Correction
 mkdir -p databases/pre-build/gtdb
-wget --no-check-certificate https://bridges.monash.edu/ndownloader/files/16378274 -O gtdb_r89_54k_kraken2_16gb.tar
+wget https://bridges.monash.edu/ndownloader/files/16378274 -O gtdb_r89_54k_kraken2_16gb.tar
 mv gtdb_r89_54k_kraken2_16gb.tar databases/pre-build/gtdb
 ```
 
