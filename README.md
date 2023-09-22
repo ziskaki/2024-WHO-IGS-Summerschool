@@ -61,7 +61,8 @@ A practical introduction to <...> for <...> in the context of the <...> project.
 | 13:00-13:30 | [Nanopore basecalling & data fromats](day-nanopore/README.md) |
 | 13:30-14:00 | [Nanopore QC](day-nanopore/README.md) |
 | 14:00-14:30 | Coffee break |
-| 14:30-16:00 | [Hands-on & demo](day-nanopore/hands-on.md) |
+| 14:30-16:00 | [Hands-on & demo (ONT isolate)](day-nanopore/hands-on.md) |
+| 14:30-16:00 | [Hands-on & demo (metagenomics)](day-nanopore/hands-on-metagenomics.md) |
 | 16:00-16:15 | Wrap-up & questions |
 
 ### <a name="2"></a> SOMEDAY, DATE
