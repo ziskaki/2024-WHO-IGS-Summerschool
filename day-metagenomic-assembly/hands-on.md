@@ -87,7 +87,12 @@ Now we do the actual binning:
 
 ```bash
 mkdir binning
-metabat -i flye-output/assembly.fasta mapping/zymo-2022.sorted.bam -o binning/metabat-bins -t 4
+
+# First, generate a depth file from BAM file
+jgi_summarize_bam_contig_depths --outputDepth binning/zymo-2022-depth.txt mapping/zymo-2022.sorted.bam
+
+# Run metabat
+metabat2 -i flye-output/assembly.fasta -a binning/zymo-2022-depth.txt -o binning/metabat-bins/zymo-2022 -t 4
 ```
 
 Inspect the output. How many "bins" do you have? 
@@ -100,7 +105,7 @@ Now one important questions is: how good and complete are your MAGs? This can be
         mkdir temporary
         mkdir ${name}_bin
         mv *.fa* ${name}_bin/
-        checkm lineage_wf --tmpdir temporary --pplacer_threads 4 -t ${task.cpus} --reduced_tree -x fa ${name}_bin ${name}_checkm > summary.txt
+checkm lineage_wf --tmpdir temporary --pplacer_threads 4 -t 4 --reduced_tree -x fa binning/metabat-bins checkm > summary.txt
         checkm bin_qa_plot --image_type png -x fa ${name}_checkm ${name}_bin ${name}_checkm_plot
         checkm tree_qa ${name}_checkm > taxonomy.txt
         mv ${name}_checkm_plot/bin_qa_plot.png bin_qa_plot.png
