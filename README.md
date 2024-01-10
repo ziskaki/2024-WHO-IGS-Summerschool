@@ -27,7 +27,7 @@ A practical introduction to bioinformatics with Nanopore data on influenza for s
 
 ## Instructors
 
-* <...>, <...>, and <...>
+* Franziska Kistner, Simon Tausch, Torsten Houwaart
 
 ## Schedule
 
