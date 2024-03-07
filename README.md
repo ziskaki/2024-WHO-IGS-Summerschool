@@ -1,35 +1,37 @@
 # Workshop Nanopore Bioinformatics
 
-A practical introduction to bioinformatics with Nanopore data on influenza for students in Namibia in the context of the IGS project.
+A practical introduction to Bioinformatics with Nanopore data on Influenza in the context of the IGS project.
 
 
 ## Instructors
 
-* Dr. Torsten Houwaart, Franziska Kistner, Dr. Simon Tausch
+* Torsten Houwaart, Franziska Kistner, Simon Tausch
 
 ## Schedule
 
-> All events are held at Hilton Windhoek, Conference room Haddis Junior 1
+> All events are held at Hilton Windhoek, Conference room Haddis Junior 1.
 
 
 ### <a name="0"></a> FRIDAY, MARCH 8
 | Time        | Topic |
 | --          | --               |
-| 9:00-9:30   | Welcome & introduction |
-| 9:30-11:00  | Navigate and manage the Linux file system |
-| 11:00-11:15 | Coffee break |
-| 11:15-12:30 | View and modify files |
+| 9:00-9:05   | Welcome |
+| 9:05-11:00  | Navigate and Manage the Linux File System |
+| 11:00-11:15 | Coffee Break |
+| 11:15-12:30 | View and Modify Files on the Command Line|
 | 12:30-13:30 | Lunch |
+| 13:30-13:45 | Wrap-up & Questions|
 
 ### <a name="1"></a> MONDAY, MARCH 11
 | Time        | Topic |
 | --          | --               |
-| 09:00-10:00 | Debriefing previous day |
-| 10:00-10:15 | Coffee Break |
-| 10:00-11:00 | Bioinformatics for genomic surveillance Intro|
-| 11:00-12:00 | Next Generation Sequencing Intro|
+| 09:00-9:45  | Welcome & Introduction |
+| 9:45-10:30 || Recap preparatory day |
+| 10:30-11:30 | Introduction to Sequence Data Analysis |
+| 11:30-11:45 | Coffee Break |
+| 11:45-12:30 | Introduction to Next Generation Sequencing |
 | 12:00-13:00 | Lunch break |
-| 13:00-16:00 | Commandline for bioinformatics Hands-On |
+| 13:00-16:00 | Advanced Command Line for Bioinformatics |
 | 16:00-16:15 | Wrap-up & questions |
 
 ## Acknowledgement
