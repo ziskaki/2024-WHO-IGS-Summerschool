@@ -32,33 +32,6 @@ A practical introduction to bioinformatics with Nanopore data on influenza for s
 | 13:00-16:00 | Commandline for bioinformatics Hands-On |
 | 16:00-16:15 | Wrap-up & questions |
 
-### <a name="2"></a> TUESDAY, MARCH 12
-| Time        | Topic |
-| --          | --               |
-| 09:00-10:00 | Debriefing previous day |
-| 15:45-16:00 | Wrap-up & questions |
-
-### <a name="3"></a> WEDNESDAY, MARCH 13
-| Time        | Topic |
-| --          | --               |
-| 09:00-10:00 | Debriefing previous day |
-| 10:00-11:00 | Metagenomics Intro |
-| 11:00-12:00 | Metagenomics Hands-On |
-| 12:00-13:00 | Lunch Break  | 
-| 13:00-15:45 |  |
-| 15:45-16:00 | Wrap-up & questions |
-
-### <a name="4"></a> THURSDAY, MARCH 14
-| Time        | Topic |
-| --          | --               |
-| 09:00-10:00 | Debriefing previous day |
-| 15:45-16:00 | Wrap-up & questions |
-
-### <a name="5"></a> FRIDAY, MARCH 15
-| Time        | Bring your own data |
-| --          | --               |
-
-
 ## Acknowledgement
 
 This course material is partly based on the following resources and on contributions from great people (no specific order):
