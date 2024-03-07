@@ -4,17 +4,18 @@ Welcome to the workshop! For every day, you will find a separate `README.md` tha
 ## Instructors
 Franziska Kistner, Simon Tausch, Torsten Houwaart
 
-## Schedule
 ### <a name="0"></a> FRIDAY, MARCH 8
 | Time        | Topic |
 | --          | --               |
-| 9:00-9:30   | Welcome & introduction |
-| 9:30-11:00  | Navigate and manage the Linux file system |
-| 11:00-11:15 | Coffee break |
-| 11:15-12:30 | View and modify files |
+| 9:00-9:05   | Welcome |
+| 9:05-11:00  | Navigate and Manage the Linux File System |
+| 11:00-11:15 | Coffee Break |
+| 11:15-12:30 | View and Modify Files on the Command Line|
 | 12:30-13:30 | Lunch |
+| 13:30-13:45 | Wrap-up & Questions|
 
 ## Lectures
+* [Navigate the Linux File System](https://docs.google.com/presentation/d/1VEfhy8bK6TNfyxE_M2oKa1_HtrY1JT_LIF5KYN4F1FY/edit?usp=sharing)
 
 ## Practical part 
 * [Hands-on: Basic commands](0.1_hands-on__basic_commands.md)
