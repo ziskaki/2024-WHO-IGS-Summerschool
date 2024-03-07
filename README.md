@@ -9,7 +9,8 @@ A practical introduction to bioinformatics with Nanopore data on influenza for s
 
 ## Schedule
 
-> All events are held at Hilton Windhoek, Conference room <...>
+> All events are held at Hilton Windhoek, Conference room Haddis Junior 1
+
 
 ### <a name="0"></a> FRIDAY, MARCH 8
 | Time        | Topic |
