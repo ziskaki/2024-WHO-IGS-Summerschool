@@ -1,5 +1,4 @@
 # Bioinformatics for Influenza Genome Reconstruction: A Hands-on Workshop 
-
 Welcome to the workshop! For every day, you will find a separate `README.md` that guides you to lectures and the hands-on exercises.
 
 ## Instructors
@@ -23,7 +22,6 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 * [Hands-on: View and modify files](0.3_hands-on__view_and_modify_files.md)
 
 ## Evaluation
-* [Pre-course evaluation]()
 * [Evaluation preparatory day](https://forms.gle/a3eXfCodkR8e6FMPA)
 
 ## Additional Resources 
