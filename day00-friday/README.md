@@ -1,24 +1,32 @@
 # Bioinformatics for Influenza Genome Reconstruction: A Hands-on Workshop 
+
 Welcome to the workshop! For every day, you will find a separate `README.md` that guides you to lectures and the hands-on exercises.
 
 ## Instructors
-Franziska Kistner, Dr Simon Tausch, Dr Torsten Houwaart
+Franziska Kistner, Simon Tausch, Torsten Houwaart
 
 ## Schedule
 ### <a name="0"></a> FRIDAY, MARCH 8
 | Time        | Topic |
 | --          | --               |
-| 9:00-10:00  | Welcome & introduction |
-| 10:00-10:30 | Navigate the Linux file system |
-
+| 9:00-9:30   | Welcome & introduction |
+| 9:30-11:00  | Navigate and manage the Linux file system |
+| 11:00-11:15 | Coffee break |
+| 11:15-12:30 | View and modify files |
+| 12:30-13:30 | Lunch |
 
 ## Lectures
 
 ## Practical part 
+* [Hands-on: Basic commands](0.1_hands-on__basic_commands.md)
+* [Hands-on: Manage files and folders](0.2_hands-on__navigate_manage_files_and_folders.md)
+* [Hands-on: View and modify files](0.3_hands-on__view_and_modify_files.md)
 
 ## Evaluation
+* [Pre-course evaluation]()
+* [Evaluation preparatory day](https://forms.gle/a3eXfCodkR8e6FMPA)
 
-## Resources 
+## Additional Resources 
 * Complete linux intro ([slides](https://docs.google.com/presentation/d/1wjtThgODtdrX_HO-tALuwGmWwAFwuc5qyjJJjeod-zU/edit?usp=sharing))
 * Linux/Bash basics + conda setup ([slides](https://docs.google.com/presentation/d/14xELo7lDbd-FYuy144ZDK1tV_ZBdBYun_COelrKYWps/edit?usp=sharing))
 * Another good resource: [Introduction to the UNIX command line](https://ngs-docs.github.io/2021-august-remote-computing/introduction-to-the-unix-command-line.html)
