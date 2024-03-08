@@ -29,4 +29,5 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 * Complete linux intro ([slides](https://docs.google.com/presentation/d/1wjtThgODtdrX_HO-tALuwGmWwAFwuc5qyjJJjeod-zU/edit?usp=sharing))
 * Linux/Bash basics + conda setup ([slides](https://docs.google.com/presentation/d/14xELo7lDbd-FYuy144ZDK1tV_ZBdBYun_COelrKYWps/edit?usp=sharing))
 * Another good resource: [Introduction to the UNIX command line](https://ngs-docs.github.io/2021-august-remote-computing/introduction-to-the-unix-command-line.html)
+* Terminal Emulator: https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192
 
