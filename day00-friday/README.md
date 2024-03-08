@@ -23,7 +23,7 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 * [Hands-on: View and modify files](0.3_hands-on__view_and_modify_files.md)
 
 ## Evaluation
-* [Evaluation preparatory day](https://forms.gle/a3eXfCodkR8e6FMPA)
+* [Evaluation preparatory day](https://forms.gle/xHpTYkQbMBRMchNLA)
 
 ## Additional Resources 
 * Complete linux intro ([slides](https://docs.google.com/presentation/d/1wjtThgODtdrX_HO-tALuwGmWwAFwuc5qyjJJjeod-zU/edit?usp=sharing))
