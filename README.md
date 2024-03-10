@@ -22,17 +22,18 @@ A practical introduction to Bioinformatics with Nanopore data on Influenza in th
 | 12:30-13:30 | Lunch |
 | 13:30-13:45 | Wrap-up & Questions|
 
-### <a name="1"></a> MONDAY, MARCH 11
+### <a name="0"></a> MONDAY, MARCH 11
 | Time        | Topic |
 | --          | --               |
-| 09:00-9:45  | Welcome & Introduction |
-| 9:45-10:30 || Recap preparatory day |
-| 10:30-11:30 | Introduction to Sequence Data Analysis |
-| 11:30-11:45 | Coffee Break |
-| 11:45-12:30 | Introduction to Next Generation Sequencing |
-| 12:00-13:00 | Lunch break |
-| 13:00-16:00 | Advanced Command Line for Bioinformatics |
-| 16:00-16:15 | Wrap-up & questions |
+| 9:00-10:00  | Welcome & introduction |
+| 10:00-11:00 | Introduction to next-generation sequencing & data analysis |
+| 11:00-11:15 | Coffee break |
+| 11:15-12:30 | Recap preparatory day |
+| 12:30-13:30 | Lunch |
+| 13:30-16:00 | View & modify files + intermediate commands |
+| 15:00-15:15 | Coffee break |
+| 16:00-16:16 | Wrap-up & evaluation |
+
 
 ## Acknowledgement
 
