@@ -20,7 +20,9 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 
 
 ## Lectures
-
+* [Welcome & introduction](https://docs.google.com/presentation/d/1bKg8gS0q0vxgDp9n1ofFOmNbVS7hrpjkCIrICbiTT0w/edit?usp=sharing)
+* [Introduction to sequencing](https://docs.google.com/presentation/d/13QSjpe0H_RQv0v02dryhIWCny7864tQR3XjJz4_5Hpk/edit?usp=sharing)
+* [Overview Influenza ](https://docs.google.com/presentation/d/11lM9JsPUqgffOq3BGMgU6QTrBw03L_m7/edit?usp=drive_link&ouid=111368892690446693709&rtpof=true&sd=true)
 
 ## Practical part 
 * [Hands-on: Recap preparatory day](1.1_hands-on__recap_preparatory_day.md)
