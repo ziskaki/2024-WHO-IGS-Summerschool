@@ -31,4 +31,16 @@ The workshop is held from March 8 to March 15, 2024 in Windhoek, Namibia.
 | 15:00-15:15 | Coffee break |
 | 16:00-16:16 | Wrap-up, questions & evaluation |
 
-to be continued for Tuesday, Wednesday & Thursday
+### <a name="1"></a> TUESDAY, MARCH 12
+| Time        | Topic |
+| --          | --               |
+| 9:00-9:30  | Recap Monday |
+| 9:30-11:00 | Software installation via Conda (Input and Hands-On |
+| 11:00-11:15 | Coffee break |
+| 11:15-12:30 | Intermediate Command Line Commands |
+| 12:30-13:30 | Lunch |
+| 13:30-16:00 | Advanced Command Line (for-loops, basic scripts)  |
+| 15:00-15:15 | Coffee break |
+| 15:15-16:00 | Nanopore data quality control |
+
+to be continued for Wednesday, Thursday and Friday
