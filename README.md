@@ -43,4 +43,38 @@ The workshop is held from March 8 to March 15, 2024 in Windhoek, Namibia.
 | 15:00-15:15 | Coffee break |
 | 15:15-16:00 | Nanopore data quality control |
 
-to be continued for Wednesday, Thursday and Friday
+
+### <a name="2"></a> Wednesday, MARCH 13
+| Time        | Topic |
+| --          | --               |
+| 9:00-9:30  | Recap Tuesday |
+| 9:30-11:00 | Advanced Command Line (for-loops, basic scripts, fastp) |
+| 11:00-11:15 | Coffee break |
+| 11:15-12:30 | Metagenomics with kraken2 (Input and Hands-On) |
+| 12:30-13:30 | Lunch |
+| 13:30-15:00 | Mapping (Input and Hands-On) |
+| 15:00-15:15 | Coffee break |
+| 15:15-16:00 | Variant Calling (Input and Hands-On) |
+
+### <a name="3"></a> Thursday, MARCH 14
+| Time        | Topic |
+| --          | --               |
+| 9:00-9:30  | Recap Wednesday |
+| 9:30-11:00 | Consensus, Typing (Input and Hands-On) |
+| 11:00-11:15 | Coffee break |
+| 11:15-12:30 | Repetition (Challenge) |
+| 12:30-13:30 | Lunch |
+| 13:30-15:00 | Workflows (Input and Hands-On) |
+| 15:00-15:15 | Coffee break |
+| 15:15-16:00 | Repetition (Challenge) |
+
+### <a name="4"></a> Friday, MARCH 15
+| Time        | Topic |
+| --          | --               |
+| 9:00-9:30  | Recap Thursday |
+| 9:30-11:00 | Bring your own data |
+| 11:00-11:15 | Coffee break |
+| 11:15-12:30 | Bring your own data |
+| 12:30-13:30 | Lunch |
+
+
