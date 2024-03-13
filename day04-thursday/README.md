@@ -14,7 +14,7 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 | 11:00-11:15 | Coffee break |
 | 11:15-12:15 | Variant Calling (Input and Hands-On), Consensus (Hands-On), Typing(Hands-On) |
 | 12:15-14:30 | Lunch |
-| 14:30-15:00 | Nextflow Pipeline (Input and Hands-On) |
+| 14:30-15:00 | Nextflow Pipeline (Hands-On and Input) |
 | 15:00-15:15 | Coffee break |
 | 15:15-16:00 | Nextflow (Hands-On) |
 
