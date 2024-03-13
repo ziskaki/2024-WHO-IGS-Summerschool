@@ -24,10 +24,11 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 
 
 ## Practical part 
-* [Hands-on: Setup](4.1_hands-on__map.md)
-* [Hands-on: Map](4.2_hands-on__variant_calling.md)
-* [Hands-on: Variant Calling](4.3_hands-on__consensus.md)
-* [Hands-on: Variant Calling](4.4_hands-on__typing.md)
+* [Hands-on: Mapping](4.1_hands-on__map.md)
+* [Hands-on: Variant Calling](4.2_hands-on__variant_calling.md)
+* [Hands-on: Consensus](4.3_hands-on__consensus.md)
+* [Hands-on: Typing](4.4_hands-on__typing.md)
+* [Hands-on: Nextflow](4.5_hands-on__nextflow.md)
 
 
 ## Evaluation
