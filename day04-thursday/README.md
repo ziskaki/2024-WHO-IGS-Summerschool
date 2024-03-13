@@ -19,6 +19,7 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 | 15:15-16:00 | Nextflow (Hands-On) |
 
 ## Lectures
+* [Overview](https://docs.google.com/presentation/d/1IKE-eWUGvmm-wFS175_g6MlMsAXTSMJc708TGMXmj6M/)
 * [Mapping](https://docs.google.com/presentation/d/1Q-zMAevntwynM4ledeWKqwFsXdyaiE2r1O-41ZcJ6wE/edit?usp=sharing)
 * [Variant Calling](https://docs.google.com/presentation/d/1VOQt-MwOrck3Cd9YAtqi9kfdAIPFhhlQdAMeSbSA7Tg/edit?usp=sharing)
 
