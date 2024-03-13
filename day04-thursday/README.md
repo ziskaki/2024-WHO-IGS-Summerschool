@@ -6,7 +6,7 @@ Today we will utilize several bioinformatics tools to investigate a specific sam
 Franziska Kistner, Simon Tausch, Torsten Houwaart
 
 ## Schedule
-### <a name="2"></a> Wednesday, MARCH 13
+### <a name="2"></a> Thursday, MARCH 14
 | Time        | Topic |
 | --          | --               |
 | 9:00-9:30  | Recap Wednesday |
