@@ -22,6 +22,7 @@ Franziska Kistner, Simon Tausch, Torsten Houwaart
 * [Overview](https://docs.google.com/presentation/d/1IKE-eWUGvmm-wFS175_g6MlMsAXTSMJc708TGMXmj6M/)
 * [Mapping](https://docs.google.com/presentation/d/1Q-zMAevntwynM4ledeWKqwFsXdyaiE2r1O-41ZcJ6wE/edit?usp=sharing)
 * [Variant Calling](https://docs.google.com/presentation/d/1VOQt-MwOrck3Cd9YAtqi9kfdAIPFhhlQdAMeSbSA7Tg/edit?usp=sharing)
+* [Nextflow](https://docs.google.com/presentation/d/1xv8BYUCUno2HV7KO-WptfT6wpvRm1U25QNvpwrCJZXQ/edit?usp=sharing)
 
 
 ## Practical part 
