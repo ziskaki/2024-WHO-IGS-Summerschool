@@ -77,4 +77,4 @@ The workshop is held from March 8 to March 15, 2024 in Windhoek, Namibia.
 | 11:15-12:30 | Bring your own data |
 | 12:30-13:30 | Lunch |
 
-
+Evaluation sheet: https://docs.google.com/forms/d/e/1FAIpQLScv2Zprkgp6DYNm7s99ud5QHeUnJkuA1q6f__Aa1EtmFzuWIw/viewform?usp=sf_link
